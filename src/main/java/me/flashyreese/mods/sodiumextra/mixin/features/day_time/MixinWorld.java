@@ -10,8 +10,8 @@ public abstract class MixinWorld implements WorldAccess {
     @Override
     public float getSkyAngle(float tickDelta) {
         if (SodiumExtraClientMod.options().extraSettings.dayLightCycle) {
-            return this.getDimension().getSkyAngle(this.getLevelProperties().getTimeOfDay());
+            return this.getDimension().method_28528(this.getLevelProperties().getTimeOfDay());
         }
-        return this.getDimension().getSkyAngle(5000L);
+        return this.getDimension().method_28528(5000L);
     }
 }
